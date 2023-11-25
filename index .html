@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Book Library</title>
     <style>
+        /* Reset styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333; /* Set a default text color */
         }
 
+        /* Header styles */
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #00796b, #00bcd4);
             color: #fff;
             text-align: center;
             padding: 1em 0;
         }
 
+        /* Navigation styles */
         nav {
-            background-color: #555;
+            background-color: #009688;
             overflow: hidden;
         }
 
@@ -32,124 +36,114 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #00796b;
+            color: #fff;
         }
 
+        /* Book section styles */
         section {
-            margin: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
         .book {
-            display: flex;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
+            background-color: #e0f2f1;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            margin: 15px;
+            width: 300px;
         }
 
         .book:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
         }
 
-        .image-frame {
-            flex: 0 0 auto; /* Do not grow, do not shrink, and initial size based on content */
-            margin-right: 20px; /* Add space between image and text frames */
-        }
-
-        .image-frame img {
-
-            width: 100%;
-            max-width: 200px;
+        .book img {
+            max-width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 16px 16px 0 0;
         }
 
-        .text-frame {
-            flex: 1; /* Grow to take available space */
+        .book h2 {
+            color: #800080; /* Purple color for DissoFlux */
+            font-size: 1.8em;
+            margin: 15px 0;
         }
 
-        .text-frame h1, .text-frame h2 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #333;
-            text-align: center;
+        .book p {
+            color: #333; /* Default text color */
+            font-size: 1.1em;
         }
 
-        .text-frame p {
-            margin: 10px 0;
-            color: #555;
-            text-align: center;
-        }
-
-        .text-frame h2:hover {
-            color: #3498db;
-            cursor: pointer;
-        }
-
+        /* Footer styles */
         footer {
-            background-color: #333;
-            color: #00cfc5;
+            background: linear-gradient(to right, #00796b, #00bcd4);
+            color: #fff;
             text-align: center;
             padding: 1em 0;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Booklet</h1>
+        <h1>Application Notes</h1>
     </header>
+
+    <nav>
+        <a href="https://www.youtube.com/watch?v=mkYD_4S2uko">Dissoflux demo</a>
+        <a href="https://www.youtube.com/watch?v=cG2IHw7S3nw">ERD 03 demo</a>
+        <a href="https://www.youtube.com/watch?v=ga96fH2nxNc">Dermax Demo</a>
+    </nav>
 
     <section>
         <div class="book">
-            <div class="image-frame">
-                <a href="DissoFluxBooklet.js\templates\index.html" </a>
-                <img src="static\1.jpg" alt="Book Cover">
-            </div>
-            <div class="text-frame">
-                <a href="DissoFluxBooklet.js\templates\index.html" </a>
-                <h1>Application Note for DissoFlux</h1>
-                <p>Click here for the booklet</p>
-            </div>
+            <a href="DissoFluxBooklet.js\templates\Dissoflux.html">
+                <img id="alignedImage" src="1.jpg" alt="Book Cover">
+                <h2>Application Note for DissoFlux</h2>
+            </a>
         </div>
 
         <div class="book">
-            <div class="image-frame">
-              <a href="erd 03\templates\index.html"</>
-                <img src="static\E 1.jpg" alt="Book Cover">
-            </div>
-            <div class="text-frame">
-                <a href = "erd 03\templates\index.html"</a>
+            <a href="Dermax\templates\Dermax.html">
+                <img id="alignedImage" src="Dermax\dermax\1.jpg" alt="Book Cover">
+                <h2>Application Note for Dermax</h2>
+            </a>
+        </div>
+
+        <div class="book">
+            <a href="erd 03\templates\ERD Note.html">
+                <img id="alignedImage" src="E 1.jpg" alt="Book Cover">
                 <h2>Application Note for ERD 03</h2>
-                <p>Click here for the booklet</p>
-            </div>
+            </a>
         </div>
 
         <div class="book">
-            <div class="image-frame">
-                <a href="Sieve shaker\templates\index.html"</>
-                <img src="static\S 1.jpg" alt="Book Cover">
-            </div>
-            <div class="text-frame">
-                <a href="Sieve shaker\templates\index.html"</>
+            <a href="Sieve shaker\templates\Sieve shaker note.html">
+                <img id="alignedImage" src="S 1.jpg" alt="Book Cover">
                 <h2>Application Note for Sieve shaker</h2>
-                <p>Click here for the booklet</p>
-            </div>
+            </a>
         </div>
+
     </section>
 
     <footer>
-        @CopyRight Electrolab Pvt Ltd.
+        &copy; Electrolab Pvt Ltd.
     </footer>
 
 </body>
