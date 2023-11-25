@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Book Library</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .book {
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .image-frame {
+            flex: 0 0 auto; /* Do not grow, do not shrink, and initial size based on content */
+            margin-right: 20px; /* Add space between image and text frames */
+        }
+
+        .image-frame img {
+
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .text-frame {
+            flex: 1; /* Grow to take available space */
+        }
+
+        .text-frame h1, .text-frame h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
+        }
+
+        .text-frame p {
+            margin: 10px 0;
+            color: #555;
+            text-align: center;
+        }
+
+        .text-frame h2:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #00cfc5;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Booklet</h1>
+    </header>
+
+    <section>
+        <div class="book">
+            <div class="image-frame">
+                <a href="DissoFluxBooklet.js\templates\index.html" </a>
+                <img src="static\1.jpg" alt="Book Cover">
+            </div>
+            <div class="text-frame">
+                <a href="DissoFluxBooklet.js\templates\index.html" </a>
+                <h1>Application Note for DissoFlux</h1>
+                <p>Click here for the booklet</p>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="image-frame">
+              <a href="erd 03\templates\index.html"</>
+                <img src="static\E 1.jpg" alt="Book Cover">
+            </div>
+            <div class="text-frame">
+                <a href = "erd 03\templates\index.html"</a>
+                <h2>Application Note for ERD 03</h2>
+                <p>Click here for the booklet</p>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="image-frame">
+                <a href="Sieve shaker\templates\index.html"</>
+                <img src="static\S 1.jpg" alt="Book Cover">
+            </div>
+            <div class="text-frame">
+                <a href="Sieve shaker\templates\index.html"</>
+                <h2>Application Note for Sieve shaker</h2>
+                <p>Click here for the booklet</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        @CopyRight Electrolab Pvt Ltd.
+    </footer>
+
+</body>
+
+</html>
